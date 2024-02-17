@@ -1,0 +1,27 @@
+﻿@page
+@model WebPorshe.Pages.PorshesModel
+@{
+    ViewData["Title"] = "Porshe page";
+}
+
+<h1>Страница Порше</h1>
+<a asp-page="./EditPorshe" class="btn btn-primary stretched-link">Создать</a>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Модель</th>
+            <th>Цвет</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var porshe in Model.porshes)
+        {
+            <tr>
+                <td><a href="EditPorshe?id=@porshe.id">@porshe.id</a></td>
+                <td>@porshe.Model</td>
+                <td>@porshe.Color</td>
+            </tr>
+        }
+    </tbody>
+</table>

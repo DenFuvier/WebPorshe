@@ -1,0 +1,14 @@
+﻿@page
+@model WebPorshe.Pages.EditPorsheModel
+@{
+}
+
+<form method="post">
+    <p>ID: @Model?.Porshe?.id</p>
+    <label for="Model">Модель автомобиля</label>
+    <input asp-for="Porshe.Model" type="text" id="Model" name="Model"><span asp-validation-for="Porshe.Model"></span>
+    <h1></h1>
+    <label for="Color">Цвет</label>
+    <input asp-for="Porshe.Color" type="text" id="Color" name="Color"><span asp-validation-for="Porshe.Color"></span>
+    <button type="submit">Сохранить</button>
+</form>
